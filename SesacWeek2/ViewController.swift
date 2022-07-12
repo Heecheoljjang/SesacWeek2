@@ -64,19 +64,19 @@ class ViewController: UIViewController {
         return "나는 \(select)"
     }
     
-    func changeLabel() {
-        firstLabel.text = "행복해 \(count[ButtonTag.first.rawValue])"
-        secondLabel.text = "사랑해 \(count[ButtonTag.second.rawValue])"
-        thirdLabel.text = "좋아해 \(count[ButtonTag.third.rawValue])"
-        fourthLabel.text = "당황해 \(count[ButtonTag.fourth.rawValue])"
-        fifthLabel.text = "속상해 \(count[ButtonTag.fifth.rawValue])"
-        sixthLabel.text = "우울해 \(count[ButtonTag.sixth.rawValue])"
-        seventhLabel.text = "심심해 \(count[ButtonTag.seventh.rawValue])"
-        eighthLabel.text = "미워해 \(count[ButtonTag.eighth.rawValue])"
-        ninthLabel.text = "슬퍼해 \(count[ButtonTag.ninth.rawValue])"
-        
-    }
-    
+//    func changeLabel() {
+//        firstLabel.text = "행복해 \(count[ButtonTag.first.rawValue])"
+//        secondLabel.text = "사랑해 \(count[ButtonTag.second.rawValue])"
+//        thirdLabel.text = "좋아해 \(count[ButtonTag.third.rawValue])"
+//        fourthLabel.text = "당황해 \(count[ButtonTag.fourth.rawValue])"
+//        fifthLabel.text = "속상해 \(count[ButtonTag.fifth.rawValue])"
+//        sixthLabel.text = "우울해 \(count[ButtonTag.sixth.rawValue])"
+//        seventhLabel.text = "심심해 \(count[ButtonTag.seventh.rawValue])"
+//        eighthLabel.text = "미워해 \(count[ButtonTag.eighth.rawValue])"
+//        ninthLabel.text = "슬퍼해 \(count[ButtonTag.ninth.rawValue])"
+//
+//    }
+//
     func showAlertController() {
         
         // 1. 바탕 만들고 글씨 넣기
@@ -100,7 +100,27 @@ class ViewController: UIViewController {
         
         count[sender.tag] += 1
         
-        changeLabel()
+        if sender.tag == ButtonTag.first.rawValue {
+            firstLabel.text = "행복해 \(count[sender.tag])"
+        } else if sender.tag == ButtonTag.second.rawValue {
+            secondLabel.text = "사랑해 \(count[sender.tag])"
+        } else if sender.tag == ButtonTag.third.rawValue {
+            thirdLabel.text = "좋아해 \(count[sender.tag])"
+        } else if sender.tag == ButtonTag.fourth.rawValue {
+            fourthLabel.text = "당황해 \(count[sender.tag])"
+        } else if sender.tag == ButtonTag.fifth.rawValue {
+            fifthLabel.text = "속상해 \(count[sender.tag])"
+        } else if sender.tag == ButtonTag.sixth.rawValue {
+            sixthLabel.text = "우울해 \(count[sender.tag])"
+        } else if sender.tag == ButtonTag.seventh.rawValue {
+            seventhLabel.text = "심심해 \(count[sender.tag])"
+        } else if sender.tag == ButtonTag.eighth.rawValue {
+            eighthLabel.text = "미워해 \(count[sender.tag])"
+        } else if sender.tag == ButtonTag.ninth.rawValue {
+            ninthLabel.text = "슬퍼해 \(count[sender.tag])"
+        }
+        
+//        changeLabel()
         
         //showAlertController()
         
