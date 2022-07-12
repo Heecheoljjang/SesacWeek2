@@ -56,13 +56,6 @@ class ViewController: UIViewController {
         
     }
 
-    func setUserNickName() -> String {
-        
-        let nicknames = ["고래밥", "칙촉", "격투가"]
-        let select = nicknames.randomElement()!
-        
-        return "나는 \(select)"
-    }
     
 //    func changeLabel() {
 //        firstLabel.text = "행복해 \(count[ButtonTag.first.rawValue])"
@@ -96,28 +89,46 @@ class ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    func setTitleText(tag: Int) -> String {
+        
+        switch tag {
+        case 0: return "행복해 \(count[tag])"
+        case 1: return "사랑해 \(count[tag])"
+        case 2: return "좋아해 \(count[tag])"
+        case 3: return "당황해 \(count[tag])"
+        case 4: return "속상해 \(count[tag])"
+        case 5: return "우울해 \(count[tag])"
+        case 6: return "심심해 \(count[tag])"
+        case 7: return "미워해 \(count[tag])"
+        case 8: return "슬퍼해 \(count[tag])"
+        
+        default:
+            return "오류"
+        }
+    }
+    
     @IBAction func tapBtn(_ sender: UIButton) {
         
         count[sender.tag] += 1
         
         if sender.tag == ButtonTag.first.rawValue {
-            firstLabel.text = "행복해 \(count[sender.tag])"
+            firstLabel.text = setTitleText(tag: sender.tag)
         } else if sender.tag == ButtonTag.second.rawValue {
-            secondLabel.text = "사랑해 \(count[sender.tag])"
+            secondLabel.text = setTitleText(tag: sender.tag)
         } else if sender.tag == ButtonTag.third.rawValue {
-            thirdLabel.text = "좋아해 \(count[sender.tag])"
+            thirdLabel.text = setTitleText(tag: sender.tag)
         } else if sender.tag == ButtonTag.fourth.rawValue {
-            fourthLabel.text = "당황해 \(count[sender.tag])"
+            fourthLabel.text = setTitleText(tag: sender.tag)
         } else if sender.tag == ButtonTag.fifth.rawValue {
-            fifthLabel.text = "속상해 \(count[sender.tag])"
+            fifthLabel.text = setTitleText(tag: sender.tag)
         } else if sender.tag == ButtonTag.sixth.rawValue {
-            sixthLabel.text = "우울해 \(count[sender.tag])"
+            sixthLabel.text = setTitleText(tag: sender.tag)
         } else if sender.tag == ButtonTag.seventh.rawValue {
-            seventhLabel.text = "심심해 \(count[sender.tag])"
+            seventhLabel.text = setTitleText(tag: sender.tag)
         } else if sender.tag == ButtonTag.eighth.rawValue {
-            eighthLabel.text = "미워해 \(count[sender.tag])"
+            eighthLabel.text = setTitleText(tag: sender.tag)
         } else if sender.tag == ButtonTag.ninth.rawValue {
-            ninthLabel.text = "슬퍼해 \(count[sender.tag])"
+            ninthLabel.text = setTitleText(tag: sender.tag)
         }
         
 //        changeLabel()
