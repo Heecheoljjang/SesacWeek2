@@ -5,6 +5,7 @@
 //  Created by HeecheolYoon on 2022/07/11.
 //
 
+// 예전 코드
 import UIKit
 
 class SmilViewController: UIViewController {
