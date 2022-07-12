@@ -9,6 +9,52 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Segmented View Controller-->
+        <scene sceneID="dCS-au-Xe2">
+            <objects>
+                <viewController id="aDQ-Gq-vmp" customClass="SegmentedViewController" customModule="SesacWeek2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tcn-fp-GEt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="y55-WL-8Nu">
+                                <rect key="frame" x="40" y="84" width="334" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControlValueChanged:" destination="aDQ-Gq-vmp" eventType="valueChanged" id="X6c-90-pRN"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a39-Pn-qwH">
+                                <rect key="frame" x="10" y="215" width="394" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="me0-2a-yhU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="y55-WL-8Nu" firstAttribute="leading" secondItem="me0-2a-yhU" secondAttribute="leading" constant="40" id="0mS-8A-b4e"/>
+                            <constraint firstItem="y55-WL-8Nu" firstAttribute="top" secondItem="me0-2a-yhU" secondAttribute="top" constant="40" id="7fj-UY-mX9"/>
+                            <constraint firstItem="me0-2a-yhU" firstAttribute="trailing" secondItem="y55-WL-8Nu" secondAttribute="trailing" constant="40" id="MP9-k6-ull"/>
+                            <constraint firstItem="a39-Pn-qwH" firstAttribute="leading" secondItem="me0-2a-yhU" secondAttribute="leading" constant="10" id="QvM-CK-KML"/>
+                            <constraint firstItem="me0-2a-yhU" firstAttribute="trailing" secondItem="a39-Pn-qwH" secondAttribute="trailing" constant="10" id="RLI-Rg-f7n"/>
+                            <constraint firstItem="a39-Pn-qwH" firstAttribute="top" secondItem="y55-WL-8Nu" secondAttribute="bottom" constant="100" id="xrB-Os-91L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myLabel" destination="a39-Pn-qwH" id="b6X-Fm-gqd"/>
+                        <outlet property="segmentControl" destination="y55-WL-8Nu" id="2pL-cj-hoj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="056-Jo-QBM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="369" y="-342"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="V86-eb-AwL">
             <objects>
@@ -26,7 +72,7 @@
                                             <constraint firstAttribute="width" secondItem="8J1-qd-p8r" secondAttribute="height" multiplier="1:1" id="Vgq-ZY-oVo"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="sesac_slime1"/>
+                                        <state key="normal" image="sesac_slime2"/>
                                         <connections>
                                             <action selector="tapBtn:" destination="PAe-zq-Nyd" eventType="touchUpInside" id="17y-cx-rxd"/>
                                         </connections>
@@ -43,7 +89,7 @@
                                             <constraint firstAttribute="width" secondItem="xcr-XI-hKU" secondAttribute="height" multiplier="1:1" id="m2Z-1s-oxS"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="sesac_slime1"/>
+                                        <state key="normal" image="sesac_slime5"/>
                                         <connections>
                                             <action selector="tapBtn:" destination="PAe-zq-Nyd" eventType="touchUpInside" id="2DF-Rx-1Vm"/>
                                         </connections>
@@ -60,7 +106,7 @@
                                             <constraint firstAttribute="width" secondItem="EcC-Wb-SFm" secondAttribute="height" multiplier="1:1" id="rmz-60-0L1"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="sesac_slime1"/>
+                                        <state key="normal" image="sesac_slime8"/>
                                         <connections>
                                             <action selector="tapBtn:" destination="PAe-zq-Nyd" eventType="touchUpInside" id="bjz-oC-wMA"/>
                                         </connections>
@@ -82,7 +128,7 @@
                                             <constraint firstAttribute="width" secondItem="7sa-qq-3H9" secondAttribute="height" multiplier="1:1" id="v3i-xE-eKG"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="sesac_slime1"/>
+                                        <state key="normal" image="sesac_slime3"/>
                                         <connections>
                                             <action selector="tapBtn:" destination="PAe-zq-Nyd" eventType="touchUpInside" id="fhZ-0V-6F1"/>
                                         </connections>
@@ -99,7 +145,7 @@
                                             <constraint firstAttribute="width" secondItem="C60-M8-1W0" secondAttribute="height" multiplier="1:1" id="m2q-8s-oJw"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="sesac_slime1"/>
+                                        <state key="normal" image="sesac_slime6"/>
                                         <connections>
                                             <action selector="tapBtn:" destination="PAe-zq-Nyd" eventType="touchUpInside" id="0MF-3y-xQY"/>
                                         </connections>
@@ -116,7 +162,7 @@
                                             <constraint firstAttribute="width" secondItem="UmA-pg-40D" secondAttribute="height" multiplier="1:1" id="o9t-ND-mCu"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="sesac_slime1"/>
+                                        <state key="normal" image="sesac_slime9"/>
                                         <connections>
                                             <action selector="tapBtn:" destination="PAe-zq-Nyd" eventType="touchUpInside" id="Hl7-9k-EHB"/>
                                         </connections>
@@ -155,7 +201,7 @@
                                             <constraint firstAttribute="width" secondItem="Y4U-7Q-Lj1" secondAttribute="height" multiplier="1:1" id="m3r-D6-I2f"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="sesac_slime1"/>
+                                        <state key="normal" image="sesac_slime4"/>
                                         <connections>
                                             <action selector="tapBtn:" destination="PAe-zq-Nyd" eventType="touchUpInside" id="0ig-sA-kl6"/>
                                         </connections>
@@ -172,7 +218,7 @@
                                             <constraint firstAttribute="width" secondItem="sRr-8V-OxQ" secondAttribute="height" multiplier="1:1" id="xCO-1B-8Tc"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="sesac_slime1"/>
+                                        <state key="normal" image="sesac_slime7"/>
                                         <connections>
                                             <action selector="tapBtn:" destination="PAe-zq-Nyd" eventType="touchUpInside" id="hv5-HN-1dn"/>
                                         </connections>
@@ -223,6 +269,7 @@
                     <connections>
                         <outlet property="eighthLabel" destination="CaI-5O-qCf" id="vg5-sU-Jpx"/>
                         <outlet property="fifthLabel" destination="U0S-4D-4fK" id="TqC-eh-Bc5"/>
+                        <outlet property="firstBtn" destination="CN2-GN-yjP" id="cBe-Re-Qjb"/>
                         <outlet property="firstLabel" destination="Fdx-On-43h" id="LqK-nO-LwO"/>
                         <outlet property="fourthLabel" destination="qKs-TH-UG0" id="XU0-UR-YRE"/>
                         <outlet property="ninthLabel" destination="Jhp-I4-I2Z" id="xEY-Or-APV"/>
@@ -662,51 +709,18 @@
             </objects>
             <point key="canvasLocation" x="340.57971014492756" y="1069.4196428571429"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="vkx-h4-Yfy">
-            <objects>
-                <viewController id="aVG-ar-gFR" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Gc9-n3-kzO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="앨범 제목앨범 제목앨범 제목앨범 제목앨범 제목앨범 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tx4-Jc-Z59">
-                                <rect key="frame" x="20" y="64" width="100" height="26.5"/>
-                                <color key="backgroundColor" red="0.73036785959999995" green="1" blue="0.93212078669999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ZoK-E6-kul"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로맨스 스릴러 액션로맨스 스릴러 액션로맨스 스릴러 액션로맨스 스릴러 액션로맨스 스릴러 액션" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omN-0U-zjv">
-                                <rect key="frame" x="140" y="64" width="254" height="27"/>
-                                <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.4150457058" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="SOd-ly-hEo"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="SOd-ly-hEo" firstAttribute="trailing" secondItem="omN-0U-zjv" secondAttribute="trailing" constant="20" id="Kf1-Yk-Wod"/>
-                            <constraint firstItem="Tx4-Jc-Z59" firstAttribute="leading" secondItem="SOd-ly-hEo" secondAttribute="leading" constant="20" id="T0O-F7-fCc"/>
-                            <constraint firstItem="omN-0U-zjv" firstAttribute="top" secondItem="SOd-ly-hEo" secondAttribute="top" constant="20" id="Uh7-cq-9ZK"/>
-                            <constraint firstItem="Tx4-Jc-Z59" firstAttribute="top" secondItem="SOd-ly-hEo" secondAttribute="top" constant="20" id="aSB-cn-Ukw"/>
-                            <constraint firstItem="omN-0U-zjv" firstAttribute="leading" secondItem="Tx4-Jc-Z59" secondAttribute="trailing" constant="20" id="zH3-8O-66n"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gkp-U8-F23" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="297.10144927536237" y="1803.3482142857142"/>
-        </scene>
     </scenes>
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="sesac_slime1" width="278" height="258"/>
+        <image name="sesac_slime2" width="278" height="258"/>
+        <image name="sesac_slime3" width="278" height="258"/>
+        <image name="sesac_slime4" width="278" height="258"/>
+        <image name="sesac_slime5" width="278" height="258"/>
+        <image name="sesac_slime6" width="278" height="258"/>
+        <image name="sesac_slime7" width="278" height="258"/>
+        <image name="sesac_slime8" width="278" height="258"/>
+        <image name="sesac_slime9" width="278" height="258"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

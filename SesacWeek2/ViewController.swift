@@ -7,6 +7,20 @@
 
 import UIKit
 
+enum ButtonTag: Int {
+    
+    case first = 0
+    case second = 1
+    case third = 2
+    case fourth = 3
+    case fifth = 4
+    case sixth = 5
+    case seventh = 6
+    case eighth = 7
+    case ninth = 8
+    
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var firstLabel: UILabel!
@@ -19,33 +33,48 @@ class ViewController: UIViewController {
     @IBOutlet weak var eighthLabel: UILabel!
     @IBOutlet weak var ninthLabel: UILabel!
     
+    @IBOutlet weak var firstBtn: UIButton!
     var count = [0,0,0,0,0,0,0,0,0]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        firstLabel.text = ""
-        secondLabel.text = ""
-        thirdLabel.text = ""
-        fourthLabel.text = ""
-        fifthLabel.text = ""
-        sixthLabel.text = ""
-        seventhLabel.text = ""
-        eighthLabel.text = ""
-        ninthLabel.text = ""
+        firstLabel.text = "행복해 \(count[0])"
+        secondLabel.text = "사랑해 \(count[1])"
+        thirdLabel.text = "좋아해 \(count[2])"
+        fourthLabel.text = "당황해 \(count[3])"
+        fifthLabel.text = "속상해 \(count[4])"
+        sixthLabel.text = "우울해 \(count[5])"
+        seventhLabel.text = "심심해 \(count[6])"
+        eighthLabel.text = "미워해 \(count[7])"
+        ninthLabel.text = "슬퍼해 \(count[8])"
         
+        //firstLabel.text = setUserNickName()
+        //view.backgroundColor = example().0
+        
+        //firstBtn.setImage(example().2, for: .normal)
+        
+    }
+
+    func setUserNickName() -> String {
+        
+        let nicknames = ["고래밥", "칙촉", "격투가"]
+        let select = nicknames.randomElement()!
+        
+        return "나는 \(select)"
     }
     
     func changeLabel() {
-        firstLabel.text = "\(count[0])"
-        secondLabel.text = "\(count[1])"
-        thirdLabel.text = "\(count[2])"
-        fourthLabel.text = "\(count[3])"
-        fifthLabel.text = "\(count[4])"
-        sixthLabel.text = "\(count[5])"
-        seventhLabel.text = "\(count[6])"
-        eighthLabel.text = "\(count[7])"
-        ninthLabel.text = "\(count[8])"
+        firstLabel.text = "행복해 \(count[ButtonTag.first.rawValue])"
+        secondLabel.text = "사랑해 \(count[ButtonTag.second.rawValue])"
+        thirdLabel.text = "좋아해 \(count[ButtonTag.third.rawValue])"
+        fourthLabel.text = "당황해 \(count[ButtonTag.fourth.rawValue])"
+        fifthLabel.text = "속상해 \(count[ButtonTag.fifth.rawValue])"
+        sixthLabel.text = "우울해 \(count[ButtonTag.sixth.rawValue])"
+        seventhLabel.text = "심심해 \(count[ButtonTag.seventh.rawValue])"
+        eighthLabel.text = "미워해 \(count[ButtonTag.eighth.rawValue])"
+        ninthLabel.text = "슬퍼해 \(count[ButtonTag.ninth.rawValue])"
+        
     }
     
     func showAlertController() {
@@ -54,40 +83,15 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: "타이틀", message: "메세지가 들어갑니다.", preferredStyle: .alert)
         // 2. 버튼 만들기(개수 등)
         let ok = UIAlertAction(title: "확인", style: .destructive, handler: nil)
-        let hi = UIAlertAction(title: "hi", style: .cancel, handler: nil)
-        let bye = UIAlertAction(title: "bye", style: .destructive, handler: nil)
-        let good = UIAlertAction(title: "good", style: .default, handler: nil)
-        let dd = UIAlertAction(title: "good", style: .default, handler: nil)
-        let aa = UIAlertAction(title: "good", style: .default, handler: nil)
-        let ddd = UIAlertAction(title: "good", style: .default, handler: nil)
-        let dddd = UIAlertAction(title: "good", style: .default, handler: nil)
-        let ddddd = UIAlertAction(title: "good", style: .default, handler: nil)
-        let ss = UIAlertAction(title: "hi", style: .default, handler: nil)
-        let sss = UIAlertAction(title: "bye", style: .destructive, handler: nil)
-        let ssss = UIAlertAction(title: "good", style: .default, handler: nil)
-        let sssss = UIAlertAction(title: "good", style: .default, handler: nil)
-        let ssssss = UIAlertAction(title: "good", style: .default, handler: nil)
-        let sssssss = UIAlertAction(title: "good", style: .default, handler: nil)
-        let ssssssss = UIAlertAction(title: "good", style: .default, handler: nil)
-        let sssssssss = UIAlertAction(title: "good", style: .default, handler: nil)
+        //let hi = UIAlertAction(title: "hi", style: .cancel, handler: nil)
+        //let bye = UIAlertAction(title: "bye", style: .destructive, handler: nil)
+        //let good = UIAlertAction(title: "good", style: .default, handler: nil)
+        
         // 3. 버튼 분리되어있는거 하나로 합쳐줌(흰 바탕에 버튼 추가)
         alert.addAction(ok)
-        alert.addAction(hi)
-        alert.addAction(good)
-        alert.addAction(bye)
-        alert.addAction(dd)
-        alert.addAction(ddd)
-        alert.addAction(dddd)
-        alert.addAction(ddddd)
-        alert.addAction(aa)
-        alert.addAction(ss)
-        alert.addAction(sss)
-        alert.addAction(ssss)
-        alert.addAction(sssss)
-        alert.addAction(ssssss)
-        alert.addAction(sssssss)
-        alert.addAction(ssssssss)
-        alert.addAction(sssssssss)
+        //alert.addAction(hi)
+        //alert.addAction(good)
+        //alert.addAction(bye)
         // 4. 띄워줌.
         present(alert, animated: true, completion: nil)
     }
@@ -98,7 +102,7 @@ class ViewController: UIViewController {
         
         changeLabel()
         
-        showAlertController()
+        //showAlertController()
         
     }
 }

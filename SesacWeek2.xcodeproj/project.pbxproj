@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		971F65B4287BFC7700B3EB33 /* SmilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971F65B3287BFC7700B3EB33 /* SmilViewController.swift */; };
+		9763015B287D212200B314B7 /* SegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9763015A287D212200B314B7 /* SegmentedViewController.swift */; };
 		9799F9AF287BA42500F63064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9799F9AE287BA42500F63064 /* AppDelegate.swift */; };
 		9799F9B1287BA42500F63064 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9799F9B0287BA42500F63064 /* SceneDelegate.swift */; };
 		9799F9B3287BA42500F63064 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9799F9B2287BA42500F63064 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		971F65B3287BFC7700B3EB33 /* SmilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmilViewController.swift; sourceTree = "<group>"; };
+		9763015A287D212200B314B7 /* SegmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedViewController.swift; sourceTree = "<group>"; };
 		9799F9AB287BA42500F63064 /* SesacWeek2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SesacWeek2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9799F9AE287BA42500F63064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9799F9B0287BA42500F63064 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				9799F9B0287BA42500F63064 /* SceneDelegate.swift */,
 				9799F9B2287BA42500F63064 /* ViewController.swift */,
 				9799F9B4287BA42500F63064 /* Main.storyboard */,
+				9763015A287D212200B314B7 /* SegmentedViewController.swift */,
 				971F65B3287BFC7700B3EB33 /* SmilViewController.swift */,
 				9799F9B7287BA42800F63064 /* Assets.xcassets */,
 				9799F9B9287BA42800F63064 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				9799F9B3287BA42500F63064 /* ViewController.swift in Sources */,
 				9799F9AF287BA42500F63064 /* AppDelegate.swift in Sources */,
+				9763015B287D212200B314B7 /* SegmentedViewController.swift in Sources */,
 				9799F9B1287BA42500F63064 /* SceneDelegate.swift in Sources */,
 				971F65B4287BFC7700B3EB33 /* SmilViewController.swift in Sources */,
 			);
