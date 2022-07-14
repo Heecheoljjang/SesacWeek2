@@ -38,12 +38,17 @@ class DdayViewController: UIViewController {
             datePicker.preferredDatePickerStyle = .wheels
         }
         
+        firstDayLabel.text = "D+100"
+        secondDayLabel.text = "D+200"
+        thirdDayLabel.text = "D+300"
+        fourthDayLabel.text = "D+400"
+        
     }
     
     func setView(view: UIView, dayLabel: UILabel, dateLabel: UILabel) {
         
         // 뷰 설정
-        view.layer.cornerRadius = 5
+        view.layer.cornerRadius = 10
         view.clipsToBounds = false
         view.layer.shadowOpacity = 0.5
         view.layer.shadowColor = UIColor.black.cgColor
@@ -57,5 +62,32 @@ class DdayViewController: UIViewController {
         dateLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
         dateLabel.textColor = .white
         
+        dayLabel.text = ""
+        dateLabel.text = ""
+        
+    }
+    
+    func setDateLabel(date: Date, label: UILabel) {
+        
+        let year = DateFormatter()
+        year.dateFormat = "yyyy년\n"
+        let day = DateFormatter()
+        day.dateFormat = "M월 dd일"
+        let result = year.string(from: date) + day.string(from: date)
+        
+        label.text = result
+    }
+    
+    @IBAction func dateChanged(_ sender: UIDatePicker) {
+        
+        let hundredDate = sender.date.addingTimeInterval(86400 * 100)
+        let twohundredDate = sender.date.addingTimeInterval(86400 * 200)
+        let threehundredDate = sender.date.addingTimeInterval(86400 * 300)
+        let fourhundredDate = sender.date.addingTimeInterval(86400 * 400)
+
+        setDateLabel(date: hundredDate, label: firstDateLabel)
+        setDateLabel(date: twohundredDate, label: secondDateLabel)
+        setDateLabel(date: threehundredDate, label: thirdDateLabel)
+        setDateLabel(date: fourhundredDate, label: fourthDateLabel)
     }
 }
