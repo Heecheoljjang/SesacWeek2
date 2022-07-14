@@ -24,6 +24,11 @@ class DdayViewController: UIViewController {
     @IBOutlet weak var fourthDateLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    @IBOutlet weak var firstImg: UIImageView!
+    @IBOutlet weak var secondImg: UIImageView!
+    @IBOutlet weak var thirdImg: UIImageView!
+    @IBOutlet weak var fourthImg: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,10 +43,29 @@ class DdayViewController: UIViewController {
             datePicker.preferredDatePickerStyle = .wheels
         }
         
+        dateChanged(datePicker)
+        
         firstDayLabel.text = "D+100"
         secondDayLabel.text = "D+200"
         thirdDayLabel.text = "D+300"
         fourthDayLabel.text = "D+400"
+        
+        firstImg.image = UIImage(named: "cake")
+        firstImg.clipsToBounds = true
+        firstImg.layer.cornerRadius = 10
+        secondImg.image = UIImage(named: "churros")
+        secondImg.clipsToBounds = true
+        secondImg.layer.cornerRadius = 10
+
+
+        thirdImg.image = UIImage(named: "icecream")
+        thirdImg.clipsToBounds = true
+        thirdImg.layer.cornerRadius = 10
+
+        fourthImg.image = UIImage(named: "macaroon")
+        fourthImg.clipsToBounds = true
+        fourthImg.layer.cornerRadius = 10
+
         
     }
     
@@ -61,7 +85,8 @@ class DdayViewController: UIViewController {
         dateLabel.textAlignment = .center
         dateLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
         dateLabel.textColor = .white
-        
+    
+        // 오늘 날짜 기준으로 레이블 설정
         dayLabel.text = ""
         dateLabel.text = ""
         
@@ -69,11 +94,9 @@ class DdayViewController: UIViewController {
     
     func setDateLabel(date: Date, label: UILabel) {
         
-        let year = DateFormatter()
-        year.dateFormat = "yyyy년\n"
-        let day = DateFormatter()
-        day.dateFormat = "M월 dd일"
-        let result = year.string(from: date) + day.string(from: date)
+        let myDate = DateFormatter()
+        myDate.dateFormat = "yyyy년\nM월 dd일"
+        let result = myDate.string(from: date)
         
         label.text = result
     }
