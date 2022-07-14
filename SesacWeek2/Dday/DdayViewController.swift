@@ -22,6 +22,7 @@ class DdayViewController: UIViewController {
     @IBOutlet weak var thirdDateLabel: UILabel!
     @IBOutlet weak var fourthDayLabel: UILabel!
     @IBOutlet weak var fourthDateLabel: UILabel!
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,8 @@ class DdayViewController: UIViewController {
         setView(view: secondView, dayLabel: secondDayLabel, dateLabel: secondDateLabel)
         setView(view: thirdView, dayLabel: thirdDayLabel, dateLabel: thirdDateLabel)
         setView(view: fourthView, dayLabel: fourthDayLabel, dateLabel: fourthDateLabel)
+        
+        
         
     }
     
@@ -44,10 +47,10 @@ class DdayViewController: UIViewController {
         
         // 레이블 설정
         dayLabel.textAlignment = .center
-        dayLabel.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        dayLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         dayLabel.textColor = .white
         dateLabel.textAlignment = .center
-        dateLabel.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        dateLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
         dateLabel.textColor = .white
         
     }

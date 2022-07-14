@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9712DDE9287FA80D0039FDDC /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9712DDE8287FA80D0039FDDC /* Search.storyboard */; };
+		9712DDEB287FA8460039FDDC /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9712DDEA287FA8460039FDDC /* Setting.storyboard */; };
+		9712DDEE287FAED90039FDDC /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 9712DDED287FAED90039FDDC /* SideMenu */; };
+		9712DDF1287FAF940039FDDC /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 9712DDF0287FAF940039FDDC /* FSCalendar */; };
+		9712DDF4287FAFC00039FDDC /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 9712DDF3287FAFC00039FDDC /* TextFieldEffects */; };
 		971F65B4287BFC7700B3EB33 /* SmilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971F65B3287BFC7700B3EB33 /* SmilViewController.swift */; };
 		9763015B287D212200B314B7 /* SegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9763015A287D212200B314B7 /* SegmentedViewController.swift */; };
 		97770864287EAD73000E4EE0 /* Dday.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97770863287EAD73000E4EE0 /* Dday.storyboard */; };
@@ -20,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9712DDE8287FA80D0039FDDC /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		9712DDEA287FA8460039FDDC /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = SOURCE_ROOT; };
 		971F65B3287BFC7700B3EB33 /* SmilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmilViewController.swift; sourceTree = "<group>"; };
 		9763015A287D212200B314B7 /* SegmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedViewController.swift; sourceTree = "<group>"; };
 		97770863287EAD73000E4EE0 /* Dday.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dday.storyboard; sourceTree = "<group>"; };
@@ -39,6 +46,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9712DDF4287FAFC00039FDDC /* TextFieldEffects in Frameworks */,
+				9712DDEE287FAED90039FDDC /* SideMenu in Frameworks */,
+				9712DDF1287FAF940039FDDC /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +78,8 @@
 		9799F9A2287BA42500F63064 = {
 			isa = PBXGroup;
 			children = (
+				9712DDE8287FA80D0039FDDC /* Search.storyboard */,
+				9712DDEA287FA8460039FDDC /* Setting.storyboard */,
 				9799F9AD287BA42500F63064 /* SesacWeek2 */,
 				9799F9AC287BA42500F63064 /* Products */,
 			);
@@ -111,6 +123,11 @@
 			dependencies = (
 			);
 			name = SesacWeek2;
+			packageProductDependencies = (
+				9712DDED287FAED90039FDDC /* SideMenu */,
+				9712DDF0287FAF940039FDDC /* FSCalendar */,
+				9712DDF3287FAFC00039FDDC /* TextFieldEffects */,
+			);
 			productName = SesacWeek2;
 			productReference = 9799F9AB287BA42500F63064 /* SesacWeek2.app */;
 			productType = "com.apple.product-type.application";
@@ -139,6 +156,11 @@
 				Base,
 			);
 			mainGroup = 9799F9A2287BA42500F63064;
+			packageReferences = (
+				9712DDEC287FAED90039FDDC /* XCRemoteSwiftPackageReference "SideMenu" */,
+				9712DDEF287FAF940039FDDC /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				9712DDF2287FAFC00039FDDC /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
+			);
 			productRefGroup = 9799F9AC287BA42500F63064 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -157,6 +179,8 @@
 				9799F9BB287BA42800F63064 /* LaunchScreen.storyboard in Resources */,
 				9799F9B8287BA42800F63064 /* Assets.xcassets in Resources */,
 				9799F9B6287BA42500F63064 /* Main.storyboard in Resources */,
+				9712DDE9287FA80D0039FDDC /* Search.storyboard in Resources */,
+				9712DDEB287FA8460039FDDC /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,10 +348,10 @@
 				INFOPLIST_FILE = SesacWeek2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Dday;
+				INFOPLIST_KEY_UIMainStoryboardFile = Setting;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -353,10 +377,10 @@
 				INFOPLIST_FILE = SesacWeek2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Dday;
+				INFOPLIST_KEY_UIMainStoryboardFile = Setting;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -392,6 +416,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9712DDEC287FAED90039FDDC /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		9712DDEF287FAF940039FDDC /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		9712DDF2287FAFC00039FDDC /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raulriera/TextFieldEffects.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9712DDED287FAED90039FDDC /* SideMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9712DDEC287FAED90039FDDC /* XCRemoteSwiftPackageReference "SideMenu" */;
+			productName = SideMenu;
+		};
+		9712DDF0287FAF940039FDDC /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9712DDEF287FAF940039FDDC /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+		9712DDF3287FAFC00039FDDC /* TextFieldEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9712DDF2287FAFC00039FDDC /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
+			productName = TextFieldEffects;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9799F9A3287BA42500F63064 /* Project object */;
 }
