@@ -32,7 +32,11 @@ class DdayViewController: UIViewController {
         setView(view: thirdView, dayLabel: thirdDayLabel, dateLabel: thirdDateLabel)
         setView(view: fourthView, dayLabel: fourthDayLabel, dateLabel: fourthDateLabel)
         
-        
+        if #available(iOS 14.0, *) {
+            datePicker.preferredDatePickerStyle = .inline
+        } else {
+            datePicker.preferredDatePickerStyle = .wheels
+        }
         
     }
     
