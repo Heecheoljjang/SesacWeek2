@@ -16,12 +16,15 @@
 		9763015B287D212200B314B7 /* SegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9763015A287D212200B314B7 /* SegmentedViewController.swift */; };
 		97770864287EAD73000E4EE0 /* Dday.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97770863287EAD73000E4EE0 /* Dday.storyboard */; };
 		97770866287EAD8D000E4EE0 /* DdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97770865287EAD8D000E4EE0 /* DdayViewController.swift */; };
+		9790A4FC2880E8E900E07D1D /* Transition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9790A4FB2880E8E900E07D1D /* Transition.storyboard */; };
+		9790A4FE2880E90200E07D1D /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9790A4FD2880E90200E07D1D /* TransitionViewController.swift */; };
 		9799F9AF287BA42500F63064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9799F9AE287BA42500F63064 /* AppDelegate.swift */; };
 		9799F9B1287BA42500F63064 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9799F9B0287BA42500F63064 /* SceneDelegate.swift */; };
 		9799F9B3287BA42500F63064 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9799F9B2287BA42500F63064 /* ViewController.swift */; };
 		9799F9B6287BA42500F63064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9799F9B4287BA42500F63064 /* Main.storyboard */; };
 		9799F9B8287BA42800F63064 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9799F9B7287BA42800F63064 /* Assets.xcassets */; };
 		9799F9BB287BA42800F63064 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9799F9B9287BA42800F63064 /* LaunchScreen.storyboard */; };
+		97F3F5082880FE020030DB70 /* TransitionSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F3F5072880FE020030DB70 /* TransitionSecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,8 @@
 		9763015A287D212200B314B7 /* SegmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedViewController.swift; sourceTree = "<group>"; };
 		97770863287EAD73000E4EE0 /* Dday.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dday.storyboard; sourceTree = "<group>"; };
 		97770865287EAD8D000E4EE0 /* DdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayViewController.swift; sourceTree = "<group>"; };
+		9790A4FB2880E8E900E07D1D /* Transition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transition.storyboard; sourceTree = "<group>"; };
+		9790A4FD2880E90200E07D1D /* TransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
 		9799F9AB287BA42500F63064 /* SesacWeek2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SesacWeek2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9799F9AE287BA42500F63064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9799F9B0287BA42500F63064 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +44,7 @@
 		9799F9B7287BA42800F63064 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9799F9BA287BA42800F63064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9799F9BC287BA42800F63064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97F3F5072880FE020030DB70 /* TransitionSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionSecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 			children = (
 				9712DDE8287FA80D0039FDDC /* Search.storyboard */,
 				9712DDEA287FA8460039FDDC /* Setting.storyboard */,
+				97F3F5062880EFC30030DB70 /* Transition */,
 				9799F9AD287BA42500F63064 /* SesacWeek2 */,
 				9799F9AC287BA42500F63064 /* Products */,
 			);
@@ -105,6 +112,16 @@
 				9799F9BC287BA42800F63064 /* Info.plist */,
 			);
 			path = SesacWeek2;
+			sourceTree = "<group>";
+		};
+		97F3F5062880EFC30030DB70 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				9790A4FD2880E90200E07D1D /* TransitionViewController.swift */,
+				9790A4FB2880E8E900E07D1D /* Transition.storyboard */,
+				97F3F5072880FE020030DB70 /* TransitionSecondViewController.swift */,
+			);
+			path = Transition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +195,7 @@
 				97770864287EAD73000E4EE0 /* Dday.storyboard in Resources */,
 				9799F9BB287BA42800F63064 /* LaunchScreen.storyboard in Resources */,
 				9799F9B8287BA42800F63064 /* Assets.xcassets in Resources */,
+				9790A4FC2880E8E900E07D1D /* Transition.storyboard in Resources */,
 				9799F9B6287BA42500F63064 /* Main.storyboard in Resources */,
 				9712DDE9287FA80D0039FDDC /* Search.storyboard in Resources */,
 				9712DDEB287FA8460039FDDC /* Setting.storyboard in Resources */,
@@ -196,6 +214,8 @@
 				9763015B287D212200B314B7 /* SegmentedViewController.swift in Sources */,
 				9799F9B1287BA42500F63064 /* SceneDelegate.swift in Sources */,
 				97770866287EAD8D000E4EE0 /* DdayViewController.swift in Sources */,
+				97F3F5082880FE020030DB70 /* TransitionSecondViewController.swift in Sources */,
+				9790A4FE2880E90200E07D1D /* TransitionViewController.swift in Sources */,
 				971F65B4287BFC7700B3EB33 /* SmilViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,7 +368,7 @@
 				INFOPLIST_FILE = SesacWeek2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Dday;
+				INFOPLIST_KEY_UIMainStoryboardFile = Transition;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
@@ -377,7 +397,7 @@
 				INFOPLIST_FILE = SesacWeek2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Dday;
+				INFOPLIST_KEY_UIMainStoryboardFile = Transition;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;

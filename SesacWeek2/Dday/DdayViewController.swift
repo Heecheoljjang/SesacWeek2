@@ -98,6 +98,7 @@ class DdayViewController: UIViewController {
         myDate.dateFormat = "yyyy년\nM월 dd일"
         let result = myDate.string(from: date)
         
+        
         label.text = result
     }
     
