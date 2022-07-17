@@ -29,8 +29,18 @@ class DdayViewController: UIViewController {
     @IBOutlet weak var thirdImg: UIImageView!
     @IBOutlet weak var fourthImg: UIImageView!
     
+    @IBOutlet weak var currentSavedLabel: UILabel!
+    @IBOutlet weak var saveBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if UserDefaults.standard.string(forKey: "date") == nil {
+            currentSavedLabel.text = "저장된 날짜가 없습니다."
+        } else {
+            currentSavedLabel.text = UserDefaults.standard.string(forKey: "date")!
+            currentSavedLabel.font = UIFont.systemFont(ofSize: 17, weight: .heavy)
+        }
 
         setView(view: firstView, dayLabel: firstDayLabel, dateLabel: firstDateLabel)
         setView(view: secondView, dayLabel: secondDayLabel, dateLabel: secondDateLabel)
@@ -113,5 +123,29 @@ class DdayViewController: UIViewController {
         setDateLabel(date: twohundredDate, label: secondDateLabel)
         setDateLabel(date: threehundredDate, label: thirdDateLabel)
         setDateLabel(date: fourhundredDate, label: fourthDateLabel)
+        
+        print(datePicker.date.formatted())
+    }
+    
+    @IBAction func tapSaveBtn(_ sender: UIButton) {
+        
+        // 저장되었다는 alert띄우기
+        let alert = UIAlertController(title: "날짜가 저장되었습니다.", message: nil, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "확인", style: .default)
+        alert.addAction(ok)
+        present(alert, animated: true)
+        
+        // UserDefaults로 저장
+        let date = datePicker.date
+        
+        let myDate = DateFormatter()
+        myDate.dateFormat = "yyyy년 M월 dd일"
+        
+        let result = myDate.string(from: date)
+        
+        UserDefaults.standard.set(result, forKey: "date")
+        
+        // currentLabel 텍스트 바꿔주기
+        currentSavedLabel.text = result
     }
 }
