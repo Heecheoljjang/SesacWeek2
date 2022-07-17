@@ -131,9 +131,23 @@ class ViewController: UIViewController {
             ninthLabel.text = setTitleText(tag: sender.tag)
         }
         
-//        changeLabel()
         
-        //showAlertController()
+    }
+    @IBAction func tapResetBtn(_ sender: UIButton) {
+        
+        for i in 0...8 {
+            count[i] = 0
+        }
+        
+        firstLabel.text = "행복해 \(count[0])"
+        secondLabel.text = "사랑해 \(count[1])"
+        thirdLabel.text = "좋아해 \(count[2])"
+        fourthLabel.text = "당황해 \(count[3])"
+        fifthLabel.text = "속상해 \(count[4])"
+        sixthLabel.text = "우울해 \(count[5])"
+        seventhLabel.text = "심심해 \(count[6])"
+        eighthLabel.text = "미워해 \(count[7])"
+        ninthLabel.text = "슬퍼해 \(count[8])"
         
     }
 }

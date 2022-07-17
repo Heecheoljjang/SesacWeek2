@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PAe-zq-Nyd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -245,6 +244,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVu-cg-tzG">
+                                <rect key="frame" x="178.5" y="719" width="57" height="73"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="reset"/>
+                                <connections>
+                                    <action selector="tapResetBtn:" destination="PAe-zq-Nyd" eventType="touchUpInside" id="xKi-Qs-a7E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hzc-Mb-pCW"/>
                         <color key="backgroundColor" red="0.71609213920000003" green="0.59200670470000005" blue="0.46987913019999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -255,13 +264,16 @@
                             <constraint firstItem="fPd-se-atA" firstAttribute="width" secondItem="NSM-Th-x76" secondAttribute="width" id="8rs-AF-9rj"/>
                             <constraint firstItem="NSM-Th-x76" firstAttribute="centerY" secondItem="aIo-aR-vTd" secondAttribute="centerY" id="I8Q-AE-qQh"/>
                             <constraint firstItem="fPd-se-atA" firstAttribute="leading" secondItem="NSM-Th-x76" secondAttribute="trailing" constant="16" id="K3D-iO-91z"/>
+                            <constraint firstItem="Hzc-Mb-pCW" firstAttribute="bottom" secondItem="kVu-cg-tzG" secondAttribute="bottom" constant="70" id="Se8-hP-kuc"/>
                             <constraint firstItem="Vof-7J-Gjg" firstAttribute="height" secondItem="fPd-se-atA" secondAttribute="height" id="TAI-hY-KIA"/>
                             <constraint firstItem="Vof-7J-Gjg" firstAttribute="centerY" secondItem="fPd-se-atA" secondAttribute="centerY" id="TV1-B2-3Je"/>
                             <constraint firstItem="2aI-xG-pLK" firstAttribute="leading" secondItem="Vof-7J-Gjg" secondAttribute="leading" id="VEE-Ru-EQ6"/>
                             <constraint firstItem="hD5-OA-t6I" firstAttribute="centerY" secondItem="2aI-xG-pLK" secondAttribute="centerY" id="XtP-00-jFU"/>
                             <constraint firstItem="NSM-Th-x76" firstAttribute="width" secondItem="aIo-aR-vTd" secondAttribute="width" multiplier="0.25" id="frx-R9-KyU"/>
+                            <constraint firstItem="kVu-cg-tzG" firstAttribute="centerX" secondItem="aIo-aR-vTd" secondAttribute="centerX" id="hqy-N5-pEb"/>
                             <constraint firstItem="hD5-OA-t6I" firstAttribute="centerX" secondItem="aIo-aR-vTd" secondAttribute="centerX" id="o7f-aK-H3l"/>
                             <constraint firstItem="NSM-Th-x76" firstAttribute="leading" secondItem="Vof-7J-Gjg" secondAttribute="trailing" constant="16" id="oB6-EI-VZG"/>
+                            <constraint firstItem="kVu-cg-tzG" firstAttribute="top" secondItem="NSM-Th-x76" secondAttribute="bottom" constant="70" id="oxj-3e-L9N"/>
                             <constraint firstItem="fPd-se-atA" firstAttribute="height" secondItem="NSM-Th-x76" secondAttribute="height" id="tih-QI-1tb"/>
                             <constraint firstItem="fPd-se-atA" firstAttribute="centerY" secondItem="NSM-Th-x76" secondAttribute="centerY" id="zkX-Dl-HTe"/>
                         </constraints>
@@ -723,6 +735,9 @@
         <image name="sesac_slime9" width="278" height="258"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
