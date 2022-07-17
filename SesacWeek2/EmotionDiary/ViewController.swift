@@ -34,42 +34,37 @@ class ViewController: UIViewController {
     @IBOutlet weak var ninthLabel: UILabel!
     
     @IBOutlet weak var firstBtn: UIButton!
-    var count = [0,0,0,0,0,0,0,0,0]
+    
+    @IBOutlet weak var resetBtn: UIButton!
+    var count: [Int] = [UserDefaults.standard.integer(forKey: "\(ButtonTag.first.rawValue)"),
+                        UserDefaults.standard.integer(forKey: "\(ButtonTag.second.rawValue)"),
+                        UserDefaults.standard.integer(forKey: "\(ButtonTag.third.rawValue)"),
+                        UserDefaults.standard.integer(forKey: "\(ButtonTag.fourth.rawValue)"),
+                        UserDefaults.standard.integer(forKey: "\(ButtonTag.fifth.rawValue)"),
+                        UserDefaults.standard.integer(forKey: "\(ButtonTag.sixth.rawValue)"),
+                        UserDefaults.standard.integer(forKey: "\(ButtonTag.seventh.rawValue)"),
+                        UserDefaults.standard.integer(forKey: "\(ButtonTag.eighth.rawValue)"),
+                        UserDefaults.standard.integer(forKey: "\(ButtonTag.ninth.rawValue)")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        resetBtn.layer.cornerRadius = 10
         
-        firstLabel.text = "행복해 \(count[0])"
-        secondLabel.text = "사랑해 \(count[1])"
-        thirdLabel.text = "좋아해 \(count[2])"
-        fourthLabel.text = "당황해 \(count[3])"
-        fifthLabel.text = "속상해 \(count[4])"
-        sixthLabel.text = "우울해 \(count[5])"
-        seventhLabel.text = "심심해 \(count[6])"
-        eighthLabel.text = "미워해 \(count[7])"
-        ninthLabel.text = "슬퍼해 \(count[8])"
+        print(count)
         
-        //firstLabel.text = setUserNickName()
-        //view.backgroundColor = example().0
-        
-        //firstBtn.setImage(example().2, for: .normal)
-        
+        firstLabel.text = "행복해 \(UserDefaults.standard.integer(forKey: "\(ButtonTag.first.rawValue)"))"
+        secondLabel.text = "사랑해 \(UserDefaults.standard.integer(forKey: "\(ButtonTag.second.rawValue)"))"
+        thirdLabel.text = "좋아해 \(UserDefaults.standard.integer(forKey: "\(ButtonTag.third.rawValue)"))"
+        fourthLabel.text = "당황해 \(UserDefaults.standard.integer(forKey: "\(ButtonTag.fourth.rawValue)"))"
+        fifthLabel.text = "속상해 \(UserDefaults.standard.integer(forKey: "\(ButtonTag.fifth.rawValue)"))"
+        sixthLabel.text = "우울해 \(UserDefaults.standard.integer(forKey: "\(ButtonTag.sixth.rawValue)"))"
+        seventhLabel.text = "심심해 \(UserDefaults.standard.integer(forKey: "\(ButtonTag.seventh.rawValue)"))"
+        eighthLabel.text = "미워해 \(UserDefaults.standard.integer(forKey: "\(ButtonTag.eighth.rawValue)"))"
+        ninthLabel.text = "슬퍼해 \(UserDefaults.standard.integer(forKey: "\(ButtonTag.ninth.rawValue)"))"
+    
     }
 
-    
-//    func changeLabel() {
-//        firstLabel.text = "행복해 \(count[ButtonTag.first.rawValue])"
-//        secondLabel.text = "사랑해 \(count[ButtonTag.second.rawValue])"
-//        thirdLabel.text = "좋아해 \(count[ButtonTag.third.rawValue])"
-//        fourthLabel.text = "당황해 \(count[ButtonTag.fourth.rawValue])"
-//        fifthLabel.text = "속상해 \(count[ButtonTag.fifth.rawValue])"
-//        sixthLabel.text = "우울해 \(count[ButtonTag.sixth.rawValue])"
-//        seventhLabel.text = "심심해 \(count[ButtonTag.seventh.rawValue])"
-//        eighthLabel.text = "미워해 \(count[ButtonTag.eighth.rawValue])"
-//        ninthLabel.text = "슬퍼해 \(count[ButtonTag.ninth.rawValue])"
-//
-//    }
-//
     func showAlertController() {
         
         // 1. 바탕 만들고 글씨 넣기
@@ -112,42 +107,64 @@ class ViewController: UIViewController {
         count[sender.tag] += 1
         
         if sender.tag == ButtonTag.first.rawValue {
-            firstLabel.text = setTitleText(tag: sender.tag)
+            firstLabel.text = "행복해 \(count[sender.tag])"
+            UserDefaults.standard.set(count[sender.tag], forKey: "\(ButtonTag.first.rawValue)")
+            print("tag: \(sender.tag), cound[sender.tag]: \(count[sender.tag])")
+            print(UserDefaults.standard.integer(forKey: "\(ButtonTag.first.rawValue)"))
         } else if sender.tag == ButtonTag.second.rawValue {
-            secondLabel.text = setTitleText(tag: sender.tag)
+            secondLabel.text = "사랑해 \(count[sender.tag])"
+            UserDefaults.standard.set(count[sender.tag], forKey: "\(ButtonTag.second.rawValue)")
         } else if sender.tag == ButtonTag.third.rawValue {
-            thirdLabel.text = setTitleText(tag: sender.tag)
+            thirdLabel.text = "좋아해 \(count[sender.tag])"
+            UserDefaults.standard.set(count[sender.tag], forKey: "\(ButtonTag.third.rawValue)")
         } else if sender.tag == ButtonTag.fourth.rawValue {
-            fourthLabel.text = setTitleText(tag: sender.tag)
+            fourthLabel.text = "당황해 \(count[sender.tag])"
+            UserDefaults.standard.set(count[sender.tag], forKey: "\(ButtonTag.fourth.rawValue)")
         } else if sender.tag == ButtonTag.fifth.rawValue {
-            fifthLabel.text = setTitleText(tag: sender.tag)
+            fifthLabel.text = "속상해 \(count[sender.tag])"
+            UserDefaults.standard.set(count[sender.tag], forKey: "\(ButtonTag.fifth.rawValue)")
         } else if sender.tag == ButtonTag.sixth.rawValue {
-            sixthLabel.text = setTitleText(tag: sender.tag)
+            sixthLabel.text = "우울해 \(count[sender.tag])"
+            UserDefaults.standard.set(count[sender.tag], forKey: "\(ButtonTag.sixth.rawValue)")
         } else if sender.tag == ButtonTag.seventh.rawValue {
-            seventhLabel.text = setTitleText(tag: sender.tag)
+            seventhLabel.text = "심심해 \(count[sender.tag])"
+            UserDefaults.standard.set(count[sender.tag], forKey: "\(ButtonTag.seventh.rawValue)")
         } else if sender.tag == ButtonTag.eighth.rawValue {
-            eighthLabel.text = setTitleText(tag: sender.tag)
+            eighthLabel.text = "미워해 \(count[sender.tag])"
+            UserDefaults.standard.set(count[sender.tag], forKey: "\(ButtonTag.eighth.rawValue)")
         } else if sender.tag == ButtonTag.ninth.rawValue {
-            ninthLabel.text = setTitleText(tag: sender.tag)
+            ninthLabel.text = "슬퍼해 \(count[sender.tag])"
+            UserDefaults.standard.set(count[sender.tag], forKey: "\(ButtonTag.ninth.rawValue)")
         }
         
         
     }
     @IBAction func tapResetBtn(_ sender: UIButton) {
         
+        //UserDefaults 삭제
+        UserDefaults.standard.removeObject(forKey: "\(ButtonTag.first.rawValue)")
+        UserDefaults.standard.removeObject(forKey: "\(ButtonTag.second.rawValue)")
+        UserDefaults.standard.removeObject(forKey: "\(ButtonTag.third.rawValue)")
+        UserDefaults.standard.removeObject(forKey: "\(ButtonTag.fourth.rawValue)")
+        UserDefaults.standard.removeObject(forKey: "\(ButtonTag.fifth.rawValue)")
+        UserDefaults.standard.removeObject(forKey: "\(ButtonTag.sixth.rawValue)")
+        UserDefaults.standard.removeObject(forKey: "\(ButtonTag.seventh.rawValue)")
+        UserDefaults.standard.removeObject(forKey: "\(ButtonTag.eighth.rawValue)")
+        UserDefaults.standard.removeObject(forKey: "\(ButtonTag.ninth.rawValue)")
+        
+        firstLabel.text = "행복해 0"
+        secondLabel.text = "사랑해 0"
+        thirdLabel.text = "좋아해 0"
+        fourthLabel.text = "당황해 0"
+        fifthLabel.text = "속상해 0"
+        sixthLabel.text = "우울해 0"
+        seventhLabel.text = "심심해 0"
+        eighthLabel.text = "미워해 0"
+        ninthLabel.text = "슬퍼해 0"
+        
         for i in 0...8 {
             count[i] = 0
         }
-        
-        firstLabel.text = "행복해 \(count[0])"
-        secondLabel.text = "사랑해 \(count[1])"
-        thirdLabel.text = "좋아해 \(count[2])"
-        fourthLabel.text = "당황해 \(count[3])"
-        fifthLabel.text = "속상해 \(count[4])"
-        sixthLabel.text = "우울해 \(count[5])"
-        seventhLabel.text = "심심해 \(count[6])"
-        eighthLabel.text = "미워해 \(count[7])"
-        ninthLabel.text = "슬퍼해 \(count[8])"
         
     }
 }

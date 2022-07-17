@@ -245,8 +245,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVu-cg-tzG">
-                                <rect key="frame" x="178.5" y="719" width="57" height="73"/>
+                                <rect key="frame" x="162" y="719" width="90" height="43"/>
                                 <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="KhK-lz-UcU"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="reset"/>
@@ -264,7 +267,7 @@
                             <constraint firstItem="fPd-se-atA" firstAttribute="width" secondItem="NSM-Th-x76" secondAttribute="width" id="8rs-AF-9rj"/>
                             <constraint firstItem="NSM-Th-x76" firstAttribute="centerY" secondItem="aIo-aR-vTd" secondAttribute="centerY" id="I8Q-AE-qQh"/>
                             <constraint firstItem="fPd-se-atA" firstAttribute="leading" secondItem="NSM-Th-x76" secondAttribute="trailing" constant="16" id="K3D-iO-91z"/>
-                            <constraint firstItem="Hzc-Mb-pCW" firstAttribute="bottom" secondItem="kVu-cg-tzG" secondAttribute="bottom" constant="70" id="Se8-hP-kuc"/>
+                            <constraint firstItem="Hzc-Mb-pCW" firstAttribute="bottom" secondItem="kVu-cg-tzG" secondAttribute="bottom" constant="100" id="Se8-hP-kuc"/>
                             <constraint firstItem="Vof-7J-Gjg" firstAttribute="height" secondItem="fPd-se-atA" secondAttribute="height" id="TAI-hY-KIA"/>
                             <constraint firstItem="Vof-7J-Gjg" firstAttribute="centerY" secondItem="fPd-se-atA" secondAttribute="centerY" id="TV1-B2-3Je"/>
                             <constraint firstItem="2aI-xG-pLK" firstAttribute="leading" secondItem="Vof-7J-Gjg" secondAttribute="leading" id="VEE-Ru-EQ6"/>
@@ -285,6 +288,7 @@
                         <outlet property="firstLabel" destination="Fdx-On-43h" id="LqK-nO-LwO"/>
                         <outlet property="fourthLabel" destination="qKs-TH-UG0" id="XU0-UR-YRE"/>
                         <outlet property="ninthLabel" destination="Jhp-I4-I2Z" id="xEY-Or-APV"/>
+                        <outlet property="resetBtn" destination="kVu-cg-tzG" id="v7A-p9-6TT"/>
                         <outlet property="secondLabel" destination="o7c-0A-gqZ" id="Cvq-aR-Yv1"/>
                         <outlet property="seventhLabel" destination="tKr-zq-W6k" id="2gD-AH-Lmy"/>
                         <outlet property="sixthLabel" destination="OSD-1a-6Az" id="ryD-89-KOq"/>
@@ -522,7 +526,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRT-GK-yPh">
                                                 <rect key="frame" x="0.0" y="0.0" width="100.5" height="130.5"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="032-1E-DWI">
+                                                    <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="032-1E-DWI">
                                                         <rect key="frame" x="0.0" y="0.0" width="100.5" height="100.5"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
@@ -724,6 +728,7 @@
     </scenes>
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="play" width="128" height="128"/>
         <image name="sesac_slime1" width="278" height="258"/>
         <image name="sesac_slime2" width="278" height="258"/>
         <image name="sesac_slime3" width="278" height="258"/>
