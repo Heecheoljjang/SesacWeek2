@@ -35,6 +35,18 @@ class DdayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 저장된 값이 있다면 string을 date로 바꿔서 datePicker에 날짜 보여주기
+        if UserDefaults.standard.string(forKey: "full") != nil {
+            let savedDate = UserDefaults.standard.string(forKey: "full")!
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            
+            let result = dateFormatter.date(from: savedDate)
+            datePicker.date = result!
+        }
+        
+        // 레이블 조건 확인 후 표시
         if UserDefaults.standard.string(forKey: "date") == nil {
             currentSavedLabel.text = "저장된 날짜가 없습니다."
         } else {
@@ -93,7 +105,7 @@ class DdayViewController: UIViewController {
         dayLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         dayLabel.textColor = .white
         dateLabel.textAlignment = .center
-        dateLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+        dateLabel.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         dateLabel.textColor = .white
     
         // 오늘 날짜 기준으로 레이블 설정
@@ -119,6 +131,7 @@ class DdayViewController: UIViewController {
         myDate.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let result = myDate.string(from: sender.date)
         
+        print(result)
         let hundredDate = sender.date.addingTimeInterval(86400 * 100)
         let twohundredDate = sender.date.addingTimeInterval(86400 * 200)
         let threehundredDate = sender.date.addingTimeInterval(86400 * 300)
@@ -144,11 +157,18 @@ class DdayViewController: UIViewController {
         let date = datePicker.date
         
         let myDate = DateFormatter()
+        let fullDate = DateFormatter()
+        
         myDate.dateFormat = "yyyy년 MM월 dd일"
+        fullDate.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
         let result = myDate.string(from: date)
+        let fullResult = fullDate.string(from: date)
         
+        print(fullResult)
         UserDefaults.standard.set(result, forKey: "date")
+        UserDefaults.standard.set(fullResult, forKey: "full")
+        
         
         // currentLabel 텍스트 바꿔주기
         currentSavedLabel.text = result + " →"

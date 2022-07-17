@@ -35,7 +35,9 @@ class DetailDayViewController: UIViewController {
             dateFormatter.locale = Locale(identifier: "ko-KR")
             
             let result = dateFormatter.date(from: date)!
+            
                         
+            print(result)
             let hundred = result.addingTimeInterval(86400 * 100)
             let twoHundred = result.addingTimeInterval(86400 * 200)
             let threeHundred = result.addingTimeInterval(86400 * 300)
