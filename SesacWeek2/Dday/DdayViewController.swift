@@ -38,7 +38,7 @@ class DdayViewController: UIViewController {
         if UserDefaults.standard.string(forKey: "date") == nil {
             currentSavedLabel.text = "저장된 날짜가 없습니다."
         } else {
-            currentSavedLabel.text = UserDefaults.standard.string(forKey: "date")!
+            currentSavedLabel.text = UserDefaults.standard.string(forKey: "date")! + " →"
             currentSavedLabel.font = UIFont.systemFont(ofSize: 17, weight: .heavy)
         }
 
@@ -105,7 +105,7 @@ class DdayViewController: UIViewController {
     func setDateLabel(date: Date, label: UILabel) {
         
         let myDate = DateFormatter()
-        myDate.dateFormat = "yyyy년\nM월 dd일"
+        myDate.dateFormat = "yyyy년\nMM월 dd일"
         let result = myDate.string(from: date)
         
         
@@ -113,6 +113,11 @@ class DdayViewController: UIViewController {
     }
     
     @IBAction func dateChanged(_ sender: UIDatePicker) {
+        
+        //detail에서 사용하기위해 날짜 데이터 저장
+        let myDate = DateFormatter()
+        myDate.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let result = myDate.string(from: sender.date)
         
         let hundredDate = sender.date.addingTimeInterval(86400 * 100)
         let twohundredDate = sender.date.addingTimeInterval(86400 * 200)
@@ -139,13 +144,13 @@ class DdayViewController: UIViewController {
         let date = datePicker.date
         
         let myDate = DateFormatter()
-        myDate.dateFormat = "yyyy년 M월 dd일"
+        myDate.dateFormat = "yyyy년 MM월 dd일"
         
         let result = myDate.string(from: date)
         
         UserDefaults.standard.set(result, forKey: "date")
         
         // currentLabel 텍스트 바꿔주기
-        currentSavedLabel.text = result
+        currentSavedLabel.text = result + " →"
     }
 }

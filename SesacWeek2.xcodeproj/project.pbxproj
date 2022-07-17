@@ -13,6 +13,7 @@
 		9712DDF1287FAF940039FDDC /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 9712DDF0287FAF940039FDDC /* FSCalendar */; };
 		9712DDF4287FAFC00039FDDC /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 9712DDF3287FAFC00039FDDC /* TextFieldEffects */; };
 		971F65B4287BFC7700B3EB33 /* SmilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971F65B3287BFC7700B3EB33 /* SmilViewController.swift */; };
+		975361832884248600844517 /* DetailDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975361822884248600844517 /* DetailDayViewController.swift */; };
 		9755F90728824C5700A55841 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9755F90628824C5700A55841 /* FirstViewController.swift */; };
 		9755F90928824D6300A55841 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9755F90828824D6300A55841 /* SecondViewController.swift */; };
 		9755F90B28824D6900A55841 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9755F90A28824D6900A55841 /* ThirdViewController.swift */; };
@@ -39,6 +40,7 @@
 		9712DDE8287FA80D0039FDDC /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		9712DDEA287FA8460039FDDC /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = SOURCE_ROOT; };
 		971F65B3287BFC7700B3EB33 /* SmilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmilViewController.swift; sourceTree = "<group>"; };
+		975361822884248600844517 /* DetailDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDayViewController.swift; sourceTree = "<group>"; };
 		9755F90628824C5700A55841 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		9755F90828824D6300A55841 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		9755F90A28824D6900A55841 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				97770863287EAD73000E4EE0 /* Dday.storyboard */,
 				97770865287EAD8D000E4EE0 /* DdayViewController.swift */,
+				975361822884248600844517 /* DetailDayViewController.swift */,
 			);
 			path = Dday;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				975361832884248600844517 /* DetailDayViewController.swift in Sources */,
 				9755F90928824D6300A55841 /* SecondViewController.swift in Sources */,
 				9799F9B3287BA42500F63064 /* ViewController.swift in Sources */,
 				9755F91328825A6A00A55841 /* SeventhViewController.swift in Sources */,
