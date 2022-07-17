@@ -153,4 +153,25 @@ class DdayViewController: UIViewController {
         // currentLabel 텍스트 바꿔주기
         currentSavedLabel.text = result + " →"
     }
+    @IBAction func tapCurrentLabel(_ sender: UITapGestureRecognizer) {
+        
+        if UserDefaults.standard.string(forKey: "date") == nil {
+            
+            //저장된 날짜 없다는 alert띄우기
+            let alert = UIAlertController(title: "저장된 날짜가 없습니다.", message: nil, preferredStyle: .alert)
+            let ok = UIAlertAction(title: "확인", style: .default)
+            alert.addAction(ok)
+            present(alert, animated: true)
+            
+        } else {
+            
+            // detailView 띄우기
+            let sb = UIStoryboard(name: "Dday", bundle: nil)
+            guard let vc = sb.instantiateViewController(withIdentifier: "DetailDayViewController") as? DetailDayViewController else { return }
+            
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true)
+        }
+        
+    }
 }

@@ -242,7 +242,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="CJN-cf-FFs">
                     <connections>
-                        <segue destination="JcU-tj-lhZ" kind="presentation" modalPresentationStyle="fullScreen" id="sZL-xY-HjR"/>
+                        <action selector="tapCurrentLabel:" destination="Y6W-OH-hqX" id="w9s-cO-d6C"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -251,7 +251,7 @@
         <!--Detail Day View Controller-->
         <scene sceneID="j8Q-YW-Rig">
             <objects>
-                <viewController id="JcU-tj-lhZ" customClass="DetailDayViewController" customModule="SesacWeek2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailDayViewController" id="JcU-tj-lhZ" customClass="DetailDayViewController" customModule="SesacWeek2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bjc-bm-nnH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
