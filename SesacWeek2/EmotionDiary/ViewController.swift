@@ -9,17 +9,18 @@ import UIKit
 
 enum ButtonTag: Int {
     
-    case first = 0
-    case second = 1
-    case third = 2
-    case fourth = 3
-    case fifth = 4
-    case sixth = 5
-    case seventh = 6
-    case eighth = 7
-    case ninth = 8
+    case first
+    case second
+    case third
+    case fourth
+    case fifth
+    case sixth
+    case seventh
+    case eighth
+    case ninth
     
 }
+
 
 class ViewController: UIViewController {
 
@@ -36,7 +37,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var firstBtn: UIButton!
     
     @IBOutlet weak var resetBtn: UIButton!
-    var count: [Int] = [UserDefaults.standard.integer(forKey: "\(ButtonTag.first.rawValue)"),
+    
+    let userDefaults = UserDefaults.standard
+    
+    var emotionTapCount: [Int] = [UserDefaults.standard.integer(forKey: "\(ButtonTag.first.rawValue)"),
                         UserDefaults.standard.integer(forKey: "\(ButtonTag.second.rawValue)"),
                         UserDefaults.standard.integer(forKey: "\(ButtonTag.third.rawValue)"),
                         UserDefaults.standard.integer(forKey: "\(ButtonTag.fourth.rawValue)"),
@@ -45,23 +49,23 @@ class ViewController: UIViewController {
                         UserDefaults.standard.integer(forKey: "\(ButtonTag.seventh.rawValue)"),
                         UserDefaults.standard.integer(forKey: "\(ButtonTag.eighth.rawValue)"),
                         UserDefaults.standard.integer(forKey: "\(ButtonTag.ninth.rawValue)")]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         resetBtn.layer.cornerRadius = 10
         
-        print(count)
+        print(emotionTapCount)
         
-        firstLabel.text = "행복해 \(UserDefaults.standard.integer(forKey: "\(ButtonTag.first.rawValue)"))"
-        secondLabel.text = "사랑해 \(UserDefaults.standard.integer(forKey: "\(ButtonTag.second.rawValue)"))"
-        thirdLabel.text = "좋아해 \(UserDefaults.standard.integer(forKey: "\(ButtonTag.third.rawValue)"))"
-        fourthLabel.text = "당황해 \(UserDefaults.standard.integer(forKey: "\(ButtonTag.fourth.rawValue)"))"
-        fifthLabel.text = "속상해 \(UserDefaults.standard.integer(forKey: "\(ButtonTag.fifth.rawValue)"))"
-        sixthLabel.text = "우울해 \(UserDefaults.standard.integer(forKey: "\(ButtonTag.sixth.rawValue)"))"
-        seventhLabel.text = "심심해 \(UserDefaults.standard.integer(forKey: "\(ButtonTag.seventh.rawValue)"))"
-        eighthLabel.text = "미워해 \(UserDefaults.standard.integer(forKey: "\(ButtonTag.eighth.rawValue)"))"
-        ninthLabel.text = "슬퍼해 \(UserDefaults.standard.integer(forKey: "\(ButtonTag.ninth.rawValue)"))"
+        firstLabel.text = "행복해 \(userDefaults.integer(forKey: "\(ButtonTag.first.rawValue)"))"
+        secondLabel.text = "사랑해 \(userDefaults.integer(forKey: "\(ButtonTag.second.rawValue)"))"
+        thirdLabel.text = "좋아해 \(userDefaults.integer(forKey: "\(ButtonTag.third.rawValue)"))"
+        fourthLabel.text = "당황해 \(userDefaults.integer(forKey: "\(ButtonTag.fourth.rawValue)"))"
+        fifthLabel.text = "속상해 \(userDefaults.integer(forKey: "\(ButtonTag.fifth.rawValue)"))"
+        sixthLabel.text = "우울해 \(userDefaults.integer(forKey: "\(ButtonTag.sixth.rawValue)"))"
+        seventhLabel.text = "심심해 \(userDefaults.integer(forKey: "\(ButtonTag.seventh.rawValue)"))"
+        eighthLabel.text = "미워해 \(userDefaults.integer(forKey: "\(ButtonTag.eighth.rawValue)"))"
+        ninthLabel.text = "슬퍼해 \(userDefaults.integer(forKey: "\(ButtonTag.ninth.rawValue)"))"
     
     }
 
@@ -87,54 +91,56 @@ class ViewController: UIViewController {
     func setTitleText(tag: Int) -> String {
         
         switch tag {
-        case 0: return "행복해 \(count[tag])"
-        case 1: return "사랑해 \(count[tag])"
-        case 2: return "좋아해 \(count[tag])"
-        case 3: return "당황해 \(count[tag])"
-        case 4: return "속상해 \(count[tag])"
-        case 5: return "우울해 \(count[tag])"
-        case 6: return "심심해 \(count[tag])"
-        case 7: return "미워해 \(count[tag])"
-        case 8: return "슬퍼해 \(count[tag])"
-        
+            
+        case ButtonTag.first.rawValue: return "행복해 \(emotionTapCount[tag])"
+        case ButtonTag.second.rawValue: return "사랑해 \(emotionTapCount[tag])"
+        case ButtonTag.third.rawValue: return "좋아해 \(emotionTapCount[tag])"
+        case ButtonTag.fourth.rawValue: return "당황해 \(emotionTapCount[tag])"
+        case ButtonTag.fifth.rawValue: return "속상해 \(emotionTapCount[tag])"
+        case ButtonTag.sixth.rawValue: return "우울해 \(emotionTapCount[tag])"
+        case ButtonTag.seventh.rawValue: return "심심해 \(emotionTapCount[tag])"
+        case ButtonTag.eighth.rawValue: return "미워해 \(emotionTapCount[tag])"
+        case ButtonTag.ninth.rawValue: return "슬퍼해 \(emotionTapCount[tag])"
+            
         default:
             return "오류"
         }
     }
+
     
     @IBAction func tapBtn(_ sender: UIButton) {
         
-        count[sender.tag] += 1
+        emotionTapCount[sender.tag] += 1
         
         if sender.tag == ButtonTag.first.rawValue {
-            firstLabel.text = "행복해 \(count[sender.tag])"
-            UserDefaults.standard.set(count[sender.tag], forKey: "\(ButtonTag.first.rawValue)")
-            print("tag: \(sender.tag), cound[sender.tag]: \(count[sender.tag])")
-            print(UserDefaults.standard.integer(forKey: "\(ButtonTag.first.rawValue)"))
+            firstLabel.text = "행복해 \(emotionTapCount[sender.tag])"
+            userDefaults.set(emotionTapCount[sender.tag], forKey: "\(ButtonTag.first.rawValue)")
+            print("tag: \(sender.tag), cound[sender.tag]: \(emotionTapCount[sender.tag])")
+            print(userDefaults.integer(forKey: "\(ButtonTag.first.rawValue)"))
         } else if sender.tag == ButtonTag.second.rawValue {
-            secondLabel.text = "사랑해 \(count[sender.tag])"
-            UserDefaults.standard.set(count[sender.tag], forKey: "\(ButtonTag.second.rawValue)")
+            secondLabel.text = "사랑해 \(emotionTapCount[sender.tag])"
+            userDefaults.set(emotionTapCount[sender.tag], forKey: "\(ButtonTag.second.rawValue)")
         } else if sender.tag == ButtonTag.third.rawValue {
-            thirdLabel.text = "좋아해 \(count[sender.tag])"
-            UserDefaults.standard.set(count[sender.tag], forKey: "\(ButtonTag.third.rawValue)")
+            thirdLabel.text = "좋아해 \(emotionTapCount[sender.tag])"
+            userDefaults.set(emotionTapCount[sender.tag], forKey: "\(ButtonTag.third.rawValue)")
         } else if sender.tag == ButtonTag.fourth.rawValue {
-            fourthLabel.text = "당황해 \(count[sender.tag])"
-            UserDefaults.standard.set(count[sender.tag], forKey: "\(ButtonTag.fourth.rawValue)")
+            fourthLabel.text = "당황해 \(emotionTapCount[sender.tag])"
+            userDefaults.set(emotionTapCount[sender.tag], forKey: "\(ButtonTag.fourth.rawValue)")
         } else if sender.tag == ButtonTag.fifth.rawValue {
-            fifthLabel.text = "속상해 \(count[sender.tag])"
-            UserDefaults.standard.set(count[sender.tag], forKey: "\(ButtonTag.fifth.rawValue)")
+            fifthLabel.text = "속상해 \(emotionTapCount[sender.tag])"
+            userDefaults.set(emotionTapCount[sender.tag], forKey: "\(ButtonTag.fifth.rawValue)")
         } else if sender.tag == ButtonTag.sixth.rawValue {
-            sixthLabel.text = "우울해 \(count[sender.tag])"
-            UserDefaults.standard.set(count[sender.tag], forKey: "\(ButtonTag.sixth.rawValue)")
+            sixthLabel.text = "우울해 \(emotionTapCount[sender.tag])"
+            userDefaults.set(emotionTapCount[sender.tag], forKey: "\(ButtonTag.sixth.rawValue)")
         } else if sender.tag == ButtonTag.seventh.rawValue {
-            seventhLabel.text = "심심해 \(count[sender.tag])"
-            UserDefaults.standard.set(count[sender.tag], forKey: "\(ButtonTag.seventh.rawValue)")
+            seventhLabel.text = "심심해 \(emotionTapCount[sender.tag])"
+            userDefaults.set(emotionTapCount[sender.tag], forKey: "\(ButtonTag.seventh.rawValue)")
         } else if sender.tag == ButtonTag.eighth.rawValue {
-            eighthLabel.text = "미워해 \(count[sender.tag])"
-            UserDefaults.standard.set(count[sender.tag], forKey: "\(ButtonTag.eighth.rawValue)")
+            eighthLabel.text = "미워해 \(emotionTapCount[sender.tag])"
+            userDefaults.set(emotionTapCount[sender.tag], forKey: "\(ButtonTag.eighth.rawValue)")
         } else if sender.tag == ButtonTag.ninth.rawValue {
-            ninthLabel.text = "슬퍼해 \(count[sender.tag])"
-            UserDefaults.standard.set(count[sender.tag], forKey: "\(ButtonTag.ninth.rawValue)")
+            ninthLabel.text = "슬퍼해 \(emotionTapCount[sender.tag])"
+            userDefaults.set(emotionTapCount[sender.tag], forKey: "\(ButtonTag.ninth.rawValue)")
         }
         
         
@@ -142,15 +148,8 @@ class ViewController: UIViewController {
     @IBAction func tapResetBtn(_ sender: UIButton) {
         
         //UserDefaults 삭제
-        UserDefaults.standard.removeObject(forKey: "\(ButtonTag.first.rawValue)")
-        UserDefaults.standard.removeObject(forKey: "\(ButtonTag.second.rawValue)")
-        UserDefaults.standard.removeObject(forKey: "\(ButtonTag.third.rawValue)")
-        UserDefaults.standard.removeObject(forKey: "\(ButtonTag.fourth.rawValue)")
-        UserDefaults.standard.removeObject(forKey: "\(ButtonTag.fifth.rawValue)")
-        UserDefaults.standard.removeObject(forKey: "\(ButtonTag.sixth.rawValue)")
-        UserDefaults.standard.removeObject(forKey: "\(ButtonTag.seventh.rawValue)")
-        UserDefaults.standard.removeObject(forKey: "\(ButtonTag.eighth.rawValue)")
-        UserDefaults.standard.removeObject(forKey: "\(ButtonTag.ninth.rawValue)")
+        let domain = Bundle.main.bundleIdentifier!
+        UserDefaults.standard.removePersistentDomain(forName: domain)
         
         firstLabel.text = "행복해 0"
         secondLabel.text = "사랑해 0"
@@ -162,8 +161,8 @@ class ViewController: UIViewController {
         eighthLabel.text = "미워해 0"
         ninthLabel.text = "슬퍼해 0"
         
-        for i in 0...8 {
-            count[i] = 0
+        for i in 0..<emotionTapCount.count {
+            emotionTapCount[i] = 0
         }
         
     }
