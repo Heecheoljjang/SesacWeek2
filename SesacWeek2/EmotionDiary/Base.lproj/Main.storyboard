@@ -282,17 +282,17 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="eighthLabel" destination="CaI-5O-qCf" id="vg5-sU-Jpx"/>
-                        <outlet property="fifthLabel" destination="U0S-4D-4fK" id="TqC-eh-Bc5"/>
                         <outlet property="firstBtn" destination="CN2-GN-yjP" id="cBe-Re-Qjb"/>
-                        <outlet property="firstLabel" destination="Fdx-On-43h" id="LqK-nO-LwO"/>
-                        <outlet property="fourthLabel" destination="qKs-TH-UG0" id="XU0-UR-YRE"/>
-                        <outlet property="ninthLabel" destination="Jhp-I4-I2Z" id="xEY-Or-APV"/>
                         <outlet property="resetBtn" destination="kVu-cg-tzG" id="v7A-p9-6TT"/>
-                        <outlet property="secondLabel" destination="o7c-0A-gqZ" id="Cvq-aR-Yv1"/>
-                        <outlet property="seventhLabel" destination="tKr-zq-W6k" id="2gD-AH-Lmy"/>
-                        <outlet property="sixthLabel" destination="OSD-1a-6Az" id="ryD-89-KOq"/>
-                        <outlet property="thirdLabel" destination="Sz3-hP-N3m" id="uQX-Gy-adh"/>
+                        <outletCollection property="countLabel" destination="Fdx-On-43h" collectionClass="NSMutableArray" id="hBF-6Z-I1W"/>
+                        <outletCollection property="countLabel" destination="o7c-0A-gqZ" collectionClass="NSMutableArray" id="P1n-ro-P1J"/>
+                        <outletCollection property="countLabel" destination="Sz3-hP-N3m" collectionClass="NSMutableArray" id="1wp-WF-HUS"/>
+                        <outletCollection property="countLabel" destination="qKs-TH-UG0" collectionClass="NSMutableArray" id="AFt-87-LXE"/>
+                        <outletCollection property="countLabel" destination="U0S-4D-4fK" collectionClass="NSMutableArray" id="Y2h-c4-7ne"/>
+                        <outletCollection property="countLabel" destination="OSD-1a-6Az" collectionClass="NSMutableArray" id="8Ai-g0-33S"/>
+                        <outletCollection property="countLabel" destination="tKr-zq-W6k" collectionClass="NSMutableArray" id="qBy-LO-np8"/>
+                        <outletCollection property="countLabel" destination="CaI-5O-qCf" collectionClass="NSMutableArray" id="wzC-tW-cez"/>
+                        <outletCollection property="countLabel" destination="Jhp-I4-I2Z" collectionClass="NSMutableArray" id="Z7e-v1-LJ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q3G-la-GOX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

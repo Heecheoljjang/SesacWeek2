@@ -148,10 +148,7 @@ class DdayViewController: UIViewController {
     @IBAction func tapSaveBtn(_ sender: UIButton) {
         
         // 저장되었다는 alert띄우기
-        let alert = UIAlertController(title: "날짜가 저장되었습니다.", message: nil, preferredStyle: .alert)
-        let ok = UIAlertAction(title: "확인", style: .default)
-        alert.addAction(ok)
-        present(alert, animated: true)
+        showAlert(alertTitle: "날짜가 저장되었습니다.", alertMessage: nil, buttonTitle: "확인", buttonStyle: .default)
         
         // UserDefaults로 저장
         let date = datePicker.date
@@ -178,10 +175,7 @@ class DdayViewController: UIViewController {
         if UserDefaults.standard.string(forKey: "date") == nil {
             
             //저장된 날짜 없다는 alert띄우기
-            let alert = UIAlertController(title: "저장된 날짜가 없습니다.", message: nil, preferredStyle: .alert)
-            let ok = UIAlertAction(title: "확인", style: .default)
-            alert.addAction(ok)
-            present(alert, animated: true)
+            showAlert(alertTitle: "저장된 날짜가 없습니다.", alertMessage: nil, buttonTitle: "확인", buttonStyle: .default)
             
         } else {
             
